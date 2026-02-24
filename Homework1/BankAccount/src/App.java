@@ -19,6 +19,7 @@ public class App {
             System.out.println("1. Add money");
             System.out.println("2. Retrieve money");
             System.out.println("3. Exit");
+            System.out.println("4. Check balance");
             System.out.print("Choose an option: ");
 
             String choice = scanner.nextLine();
@@ -39,8 +40,11 @@ public class App {
                         System.out.println("Thank you for using the Bank Account Manager. Goodbye!");
                         running = false;
                         break;
+                    case "4":
+                        System.out.println("Current balance: $" + account.getBalance());
+                        break;
                     default:
-                        System.out.println("Invalid option. Please select 1, 2, or 3.");
+                        System.out.println("Invalid option. Please select 1, 2, 3, or 4.");
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input! Please enter a valid number for the amount.");
