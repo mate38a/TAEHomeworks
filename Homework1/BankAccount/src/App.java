@@ -18,8 +18,8 @@ public class App {
             System.out.println("\n--- MAIN MENU ---");
             System.out.println("1. Add money");
             System.out.println("2. Retrieve money");
-            System.out.println("3. Exit");
-            System.out.println("4. Check balance");
+            System.out.println("3. Check balance");
+            System.out.println("4. Exit");
             System.out.print("Choose an option: ");
 
             String choice = scanner.nextLine();
@@ -37,11 +37,11 @@ public class App {
                         account.retrieveMoney(retrieveAmount);
                         break;
                     case "3":
-                        System.out.println("Thank you for using the Bank Account Manager. Goodbye!");
-                        running = false;
+                        System.out.println("Current balance: $" + account.getBalance());
                         break;
                     case "4":
-                        System.out.println("Current balance: $" + account.getBalance());
+                        System.out.println("Thank you for using the Bank Account Manager. Goodbye!");
+                        running = false;
                         break;
                     default:
                         System.out.println("Invalid option. Please select 1, 2, 3, or 4.");
